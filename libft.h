@@ -30,5 +30,6 @@ char	*ft_strstr(char *str, char *to_find);
 void	ft_swap(int *a, int *b);
 void    ft_memset(void *str, int cin, size_t iin);
 void    ft_bzero(void *str, size_t iin);
+void    ft_memcpy(void *dst, void *src, size_t n);
 
 #endif

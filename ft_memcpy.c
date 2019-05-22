@@ -1,25 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memset.c                                        :+:      :+:    :+:   */
+/*   ft_memcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bwebb <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/05/22 13:34:57 by bwebb             #+#    #+#             */
-/*   Updated: 2019/05/22 15:28:17 by bwebb            ###   ########.fr       */
+/*   Created: 2019/05/22 15:03:05 by bwebb             #+#    #+#             */
+/*   Updated: 2019/05/22 15:29:11 by bwebb            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_bzero(void *str, size_t iin)
+void	ft_memcpy(void *dst, void *src, size_t n)
 {
-	char	*ptr;
 	int	i;
+	char	*fuck;
+	char	*pointers;
 
 	i = -1;
-	ptr = str;
-	if ((int) iin > 0)
-		while ((++i < (int) iin) && (ptr[i] != '\0'))
-			ptr[i] = '\0';
+	fuck = dst;
+	pointers = src;
+	if ((int) n > 0)
+        while ((++i < (int) n) && (pointers[i] != '\0'))
+		fuck[i] = pointers[i];
 }
