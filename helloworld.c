@@ -1,43 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putnbr.c                                        :+:      :+:    :+:   */
+/*   helloworld.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bwebb <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/01/26 11:59:07 by bwebb             #+#    #+#             */
-/*   Updated: 2019/05/22 13:02:22 by bwebb            ###   ########.fr       */
+/*   Created: 2019/05/22 13:16:17 by bwebb             #+#    #+#             */
+/*   Updated: 2019/05/22 13:29:48 by bwebb            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
+#include "libft.h"
 
-void	ft_putnbr(int in)
+int		main()
 {
-	char	str[10];
-	int		k;
-	int		pos;
-
-	k = 0;
-	pos = 1;
-	if (in < 0)
-	{
-		pos = 0;
-		in *= -1;
-	}
-	while (!(in < 10))
-	{
-		str[k] = (in % 10) + 48;
-		in -= in % 10;
-		in /= 10;
-		k++;
-	}
-	str[k] = in + 48;
-	if (pos == 0)
-		write(1, "-", 1);
-	while (k != -1)
-	{
-		write(1, &str[k], 1);
-		k--;
-	}
+	ft_putstr("Hello World.");
+	return(0);
 }

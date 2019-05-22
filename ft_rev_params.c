@@ -6,13 +6,13 @@
 /*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/01/22 16:33:46 by bwebb             #+#    #+#             */
-/*   Updated: 2019/05/20 16:41:55 by marvin           ###   ########.fr       */
+/*   Updated: 2019/05/22 13:08:41 by bwebb            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		ft_rev_params(int argc, char **argv)
+void	ft_rev_params(int argc, char **argv)
 {
 	int i;
 

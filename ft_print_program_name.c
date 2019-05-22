@@ -6,17 +6,18 @@
 /*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/01/22 15:43:46 by bwebb             #+#    #+#             */
-/*   Updated: 2019/05/20 16:43:51 by marvin           ###   ########.fr       */
+/*   Updated: 2019/05/22 13:13:45 by bwebb            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_print_program_name(int argc, char **argv)
+void	ft_print_program_name(int argc, char **argv)
 {
 	int i;
 
 	i = 0;
+	argc++;
 	while (argv[0][i] != '\0')
 	{
 		ft_putchar(argv[0][i]);
