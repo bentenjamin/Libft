@@ -28,5 +28,7 @@ int 	ft_strnchr(char *str, char cin);
 char	*ft_strncpy(char *dest, char *src, unsigned int n);
 char	*ft_strstr(char *str, char *to_find);
 void	ft_swap(int *a, int *b);
+void    ft_memset(void *str, int cin, size_t iin);
+void    ft_bzero(void *str, size_t iin);
 
 #endif
