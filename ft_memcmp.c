@@ -1,27 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memchr.c                                        :+:      :+:    :+:   */
+/*   ft_memcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: bwebb <marvin@42.fr>                       +#+  +:+       +#+        */
+/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/05/24 16:11:05 by bwebb             #+#    #+#             */
-/*   Updated: 2019/05/24 16:18:56 by bwebb            ###   ########.fr       */
+/*   Created: 2019/01/22 13:07:10 by bwebb             #+#    #+#             */
+/*   Updated: 2019/05/24 16:30:02 by bwebb            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void *ft_memchr(const void *str, int c, size_t n)
+int	ft_memcmp(const void *str1, const void *str2, size_t n)
 {
-	char	*s;
-	int		i;
+	size_t	i;
+	char	*s1;
+	char	*s2;
 
+	s1 = (char *) str1;
+	s2 = (char *) str2;
 	i = -1;
-	s = (char *) str;
-	if ((int) n > 0)
-		while ((s[++i] != '\0') && (i < (int) n))
-			if (s[i] == c)
-				return (s + i);
-	return (NULL);
+	while (++i < n)
+		if ((s1[i] != s2[i]) || ((s1[i] == '\0') && (s2[i] == '\0')))
+			return (s1 - s2);
+	return (0);
 }
