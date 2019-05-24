@@ -6,7 +6,7 @@
 /*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/01/21 10:42:53 by bwebb             #+#    #+#             */
-/*   Updated: 2019/05/24 13:41:02 by bwebb            ###   ########.fr       */
+/*   Updated: 2019/05/24 18:00:33 by bwebb            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ char	*ft_strstr(const char *hay, const char *ned)
 		{
 			j = 0;
 			bf2 = 1;
-			while ((++j < ft_strlen(ned)) && (bf2 != 0))
+			while ((++j < (int) ft_strlen(ned)) && (bf2 != 0))
 				if (hay[i + j] != ned[j])
 					bf2 = 0;
 			if (bf2 == 1)
