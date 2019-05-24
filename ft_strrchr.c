@@ -1,36 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcat.c                                        :+:      :+:    :+:   */
+/*   ft_strrchr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bwebb <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/05/23 10:46:40 by bwebb             #+#    #+#             */
-/*   Updated: 2019/05/24 12:03:19 by bwebb            ###   ########.fr       */
+/*   Created: 2019/01/26 15:02:38 by bwebb             #+#    #+#             */
+/*   Updated: 2019/05/24 12:22:32 by bwebb            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strncat(char *dest, const char *src, size_t n)
+char	*ft_strrchr(const char *str, char cin)
 {
-	int			i;
-	int			j;
-	char		*dst;
-	const char	*sorc;
+	int i;
 
-	i = 0;
-	dst = dest;
-	sorc = src;
-	while (dst[i] != '\0')
-		i++;
-	j = 0;
-	while ((sorc[j] != '\0') && (j != (int) n))
-	{
-		dst[i] = sorc[j];
-		i++;
-		j++;
-	}
-	dst[i] = '\0';
-	return (dest);
+	i = ft_strlen((char *) str);
+	while (str[--i] != '\0')
+		if (str[i] == cin)
+			return ((char *) &str[i]);
+	return (0);
 }
