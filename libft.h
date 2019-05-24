@@ -33,6 +33,10 @@ void    ft_bzero(void *str, size_t iin);
 void    ft_memcpy(void *dst, void *src, size_t n);
 char    *ft_strcat(char *dest, const char *src);
 char    *ft_strnstr(const char *hay, const char *ned, size_t n);
-int ft_strncmp(const char *s1, const char *s2, size_t n);
+int		ft_strncmp(const char *s1, const char *s2, size_t n);
+void    *ft_memccpy(void *dest, const void *source, int c, size_t n);
+void	*ft_memmove(void *str1, const void *str2, size_t n);
+void	*ft_memchr(const void *str, int c, size_t n);
+int		ft_memcmp(const void *str1, const void *str2, size_t n);
 
 #endif

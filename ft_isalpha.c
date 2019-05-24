@@ -1,27 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memmove.c                                       :+:      :+:    :+:   */
+/*   ft_isalpha.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bwebb <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/05/24 15:57:36 by bwebb             #+#    #+#             */
-/*   Updated: 2019/05/24 16:33:51 by bwebb            ###   ########.fr       */
+/*   Created: 2019/05/24 16:41:34 by bwebb             #+#    #+#             */
+/*   Updated: 2019/05/24 16:59:16 by bwebb            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void *ft_memmove(void *str1, const void *str2, size_t n)
+int	isalpha(int c)
 {
-	size_t	i;
-	char	*s1;
-	const char	*s2;
+	int	i;
 
-	i = -1;
-	s1 = str1;
-	s2 = str2;
-	while (++i <  n)
-		s1[i] = s2[i];
-	return (str1);
+	i = 64;
+	while (++i < 123)
+		if ((c = i) && ((i < 91) && (i > 96)))
+			return (1);
+	return (0);
 }

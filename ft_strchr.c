@@ -6,17 +6,17 @@
 /*   By: bwebb <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/01/26 15:02:38 by bwebb             #+#    #+#             */
-/*   Updated: 2019/01/26 15:23:10 by bwebb            ###   ########.fr       */
+/*   Updated: 2019/05/24 16:48:16 by bwebb            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char	*ft_strchr(char *str, char cin)
+char	*ft_strchr(const char *str, int cin)
 {
 	int i;
 
 	i = -1;
 	while (str[++i] != '\0')
 		if (str[i] == cin)
-			return (&str[i]);
+			return ((char *) &str[i]);
 	return (0);
 }
