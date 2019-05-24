@@ -20,7 +20,7 @@ void	ft_putstr(char *str);
 int 	*ft_range(int min, int max);
 void	ft_rev_params(int argc, char **argv);
 char	*ft_strchr(char *str, char cin);
-int 	ft_strcmp(char *s1, char *s2);
+int 	ft_strcmp(const char *s1, const char *s2);
 char	*ft_strcpy(char *dest, char *src);
 char	*ft_strdup(char *src);
 size_t 	ft_strlen(const char *str);
