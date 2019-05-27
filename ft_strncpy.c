@@ -6,22 +6,23 @@
 /*   By: bwebb <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/01/21 08:52:07 by bwebb             #+#    #+#             */
-/*   Updated: 2019/05/22 13:06:08 by bwebb            ###   ########.fr       */
+/*   Updated: 2019/05/27 15:26:39 by bwebb            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char	*ft_strncpy(char *dest, char *src, int n)
+#include "libft.h"
+
+char	*ft_strncpy(char *dest, char *src, size_t n)
 {
 	int i;
+	int	k;
 
-	i = 0;
-	while (src[i] != '\0')
-	{
-		dest[i] = src[i];
-		i++;
-	}
-	dest[i] = src[i];
-	while (i++ != n)
-		dest[i] = '\0';
+	i = -1;
+	k = ft_strlen(src);
+	while (++i < (int) n)
+		if  (i < k)
+			dest[i] = src[i];
+		else
+			dest[i] = '\0';
 	return (dest);
 }
