@@ -6,20 +6,20 @@
 /*   By: bwebb <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/22 13:34:57 by bwebb             #+#    #+#             */
-/*   Updated: 2019/05/22 14:23:54 by bwebb            ###   ########.fr       */
+/*   Updated: 2019/05/27 11:34:29 by bwebb            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_memset(void *str, int cin, size_t iin)
+void	*ft_memset(void *str, int cin, size_t iin)
 {
 	char	*ptr;
-	int	i;
+	size_t	i;
 
 	i = -1;
 	ptr = str;
-	if ((int) iin > 0)
-		while ((++i < (int) iin) && (ptr[i] != '\0'))
-			ptr[i] = cin;
+	while (++i < iin)
+		ptr[i] = cin;
+	return (str);
 }

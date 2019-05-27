@@ -6,7 +6,7 @@
 /*   By: bwebb <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/24 15:57:36 by bwebb             #+#    #+#             */
-/*   Updated: 2019/05/24 16:33:51 by bwebb            ###   ########.fr       */
+/*   Updated: 2019/05/27 13:31:05 by bwebb            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,14 +14,23 @@
 
 void *ft_memmove(void *str1, const void *str2, size_t n)
 {
-	size_t	i;
-	char	*s1;
-	const char	*s2;
+	char		*d;
+	const char	*s;
+	size_t 		i;
 
 	i = -1;
-	s1 = str1;
-	s2 = str2;
-	while (++i <  n)
-		s1[i] = s2[i];
+	s = str2;
+	d = str1;
+	if (((s == NULL) && (d == NULL)) || (str1 == str2))
+		return (NULL);
+	if (d < s)
+		while (++i <  n)
+			d[i] = s[i];
+	else
+	{
+		i = n;
+		while ((int)--i > -1)
+			d[i] = s[i];
+	}
 	return (str1);
 }
