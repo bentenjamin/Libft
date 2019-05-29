@@ -1,28 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcpy.c                                        :+:      :+:    :+:   */
+/*   ft_abs.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bwebb <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/05/22 15:03:05 by bwebb             #+#    #+#             */
-/*   Updated: 2019/05/29 15:48:43 by bwebb            ###   ########.fr       */
+/*   Created: 2019/05/29 14:33:17 by bwebb             #+#    #+#             */
+/*   Updated: 2019/05/29 15:48:37 by bwebb            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-
-void	*ft_memcpy(void *dst, void *src, size_t n)
+int	ft_abs(int i)
 {
-	size_t	i;
-	char	*fuck;
-	char	*pointers;
-
-	i = -1;
-	fuck = dst;
-	pointers = src;
-	if (!((fuck == NULL) && (pointers == NULL)))
-    while (++i < n)
-		fuck[i] = pointers[i];
-	return (dst);
+	if ((i < 0) && (i != -2147483648))
+		return (i * -1);
+	return (i);
 }

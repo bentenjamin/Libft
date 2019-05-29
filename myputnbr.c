@@ -1,28 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcpy.c                                        :+:      :+:    :+:   */
+/*   ft_putnbr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bwebb <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/05/22 15:03:05 by bwebb             #+#    #+#             */
+/*   Created: 2019/01/26 11:59:07 by bwebb             #+#    #+#             */
 /*   Updated: 2019/05/29 15:48:43 by bwebb            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memcpy(void *dst, void *src, size_t n)
+void	ft_putnbr(int in)
 {
-	size_t	i;
-	char	*fuck;
-	char	*pointers;
+	char	str[10];
+	int		k;
 
-	i = -1;
-	fuck = dst;
-	pointers = src;
-	if (!((fuck == NULL) && (pointers == NULL)))
-    while (++i < n)
-		fuck[i] = pointers[i];
-	return (dst);
+	k = 0;
+	(in < 0) ? ft_putchar('-') : in;
+	while (!((in > -10) && (in < 10)))
+	{
+		str[k++] = ft_abs(in % 10) + 48;
+		in /= 10;
+	}
+	str[k] = ft_abs(in) + 48;
+	while (k > -1)
+		ft_putchar(str[k--]);
 }

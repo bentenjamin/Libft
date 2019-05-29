@@ -3,6 +3,7 @@
 #include <stdio.h>
 #include <string.h>
 #include <stdlib.h>
+#include <unistd.h>
 
 typedef struct  s_list
 {
@@ -49,5 +50,6 @@ int     ft_tolower(int c);
 char    *ft_strncat(char *dest, const char *src, size_t n);
 size_t	ft_strlcat(char *d, const char *s, size_t n);
 char	*ft_strrchr(const char *str, char cin);
+int		ft_abs(int i);
 
 #endif

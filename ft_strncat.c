@@ -6,7 +6,7 @@
 /*   By: bwebb <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/23 10:46:40 by bwebb             #+#    #+#             */
-/*   Updated: 2019/05/27 15:36:55 by bwebb            ###   ########.fr       */
+/*   Updated: 2019/05/29 17:22:12 by bwebb            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ char	*ft_strncat(char *dest, const char *src, size_t n)
 	while (dst[i] != '\0')
 		i++;
 	j = 0;
-	while ((sorc[j] != '\0') && (j != (int) n))
+	while ((sorc[j] != '\0') && (j != (int)n))
 	{
 		dst[i] = sorc[j];
 		i++;
