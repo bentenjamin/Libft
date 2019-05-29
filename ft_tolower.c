@@ -6,13 +6,13 @@
 /*   By: bwebb <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/24 17:50:32 by bwebb             #+#    #+#             */
-/*   Updated: 2019/05/24 18:02:28 by bwebb            ###   ########.fr       */
+/*   Updated: 2019/05/29 13:41:38 by bwebb            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int ft_lower(int c)
+int ft_tolower(int c)
 {
 	if ((ft_isalpha(c) == 1) && (c < 96))
 		return (c + 32);

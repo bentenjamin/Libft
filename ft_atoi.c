@@ -6,30 +6,32 @@
 /*   By: bwebb <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/01/26 11:22:30 by bwebb             #+#    #+#             */
-/*   Updated: 2019/05/24 15:25:47 by bwebb            ###   ########.fr       */
+/*   Updated: 2019/05/29 13:39:22 by bwebb            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 int	ft_atoi(char *str)
 {
 	int	i;
-	int	k;
+	int	nbr;
 	int	neg;
 
-	k = 0;
-	neg = 1;
-	while (!((str[k] >= '0') && (str[k] <= '9')))
-		k++;
-	if (k != 0)
-		if (str[k - 1] == '-')
-			neg = -1;
 	i = 0;
-	while (str[k] != '\0' && (str[k] >= '0') && (str[k] <= '9'))
+	neg = 1;
+	nbr = 0;
+	while ((str[i] == '\t') || (str[i] == '\r') || (str[i] == '\f')\
+		   	|| (str[i] == '\v') || (str[i] == ' ') || (str[i] == '\n'))
+		i++;
+	if ((str[i] == '-') || (str[i] == '+'))
+		if (str[i++] == '-')
+			neg = -1;
+	while (ft_isdigit(str[i]))
 	{
-		i *= 10;
-		i += str[k] - 48;
-		k++;
+		nbr *= 10;
+		nbr += str[i] - 48;
+		i++;
 	}
-	i *= neg;
-	return (i);
+	return (nbr * neg);
 }

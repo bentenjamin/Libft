@@ -6,7 +6,7 @@
 #    By: bwebb <marvin@42.fr>                       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/05/28 15:31:17 by bwebb             #+#    #+#              #
-#    Updated: 2019/05/28 17:47:45 by bwebb            ###   ########.fr        #
+#    Updated: 2019/05/29 13:21:21 by bwebb            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -18,14 +18,14 @@ OSRCS = *.o
 
 FLAGS = -Wall -Werror -Wextra
 
-Head = libft.h
+HEAD = libft.h
 
 GHEAD = libft.h.gch
 
 all: $(NAME)
 
 $(NAME):
-	gcc -c -I. $(SRCS) $(FLAGS) $(HEAD)
+	gcc -c $(SRCS) $(FLAGS) $(HEAD)
 	ar rc $(NAME) $(OSRCS) $(GHEAD)
 	ranlib $(NAME)
 
@@ -34,6 +34,6 @@ clean:
 	/bin/rm -f $(GHEAD)
 
 fclean: clean
-	/bin/rm -f $(HEAD)
+	/bin/rm -f $(NAME)
 
-re: fclean all
+re: fclean all clean
