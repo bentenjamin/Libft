@@ -6,7 +6,7 @@
 /*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/01/21 10:42:53 by bwebb             #+#    #+#             */
-/*   Updated: 2019/05/29 15:48:44 by bwebb            ###   ########.fr       */
+/*   Updated: 2019/05/29 17:42:34 by bwebb            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,10 +21,10 @@ char	*ft_strnstr(const char *hay, const char *ned, size_t n)
 
 	i = -1;
 	k = n - ft_strlen(ned);
-    if (ft_strncmp(ned, "", 1) == 0)
-        return ((char *) hay);
-    if (ft_strncmp(hay, "", 1) == 0)
-        return (NULL);
+	if (ft_strncmp(ned, "", 1) == 0)
+		return ((char *) hay);
+	if (ft_strncmp(hay, "", 1) == 0)
+		return (NULL);
 	while (++i <= k)
 		if ((hay[i] == ned[0]) && (i < (int) n))
 		{
@@ -35,6 +35,6 @@ char	*ft_strnstr(const char *hay, const char *ned, size_t n)
 					bf2 = 0;
 			if (bf2 == 1)
 				return ((char *) &hay[i]);
-        }
-    return (NULL);
+		}
+	return (NULL);
 }

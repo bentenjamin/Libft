@@ -6,7 +6,7 @@
 /*   By: bwebb <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/29 15:49:50 by bwebb             #+#    #+#             */
-/*   Updated: 2019/05/29 17:17:31 by bwebb            ###   ########.fr       */
+/*   Updated: 2019/05/29 17:40:40 by bwebb            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,9 +18,9 @@ static void	ft_ptnr(int n)
 	ft_putchar((n % 10) + '0');
 }
 
-void    ft_putnbr(int n)
+void		ft_putnbr(int n)
 {
-    if (n == -2147483648)
+	if (n == -2147483648)
 		return (ft_putstr("-2147483648"));
 	(n < 0) ? ft_putchar('-') : 0;
 	ptnr(ft_abs(n));

@@ -1,21 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_maxminrange.c                                   :+:      :+:    :+:   */
+/*   ft_abs.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
+/*   By: bwebb <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/01/23 18:38:00 by bwebb             #+#    #+#             */
-/*   Updated: 2019/05/29 17:34:17 by bwebb            ###   ########.fr       */
+/*   Created: 2019/05/29 14:33:17 by bwebb             #+#    #+#             */
+/*   Updated: 2019/05/29 17:37:21 by bwebb            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_maxminrange(int min, int max)
+int	ft_abs(int i)
 {
-	if (min < 0 && max < 0)
-		return ((min * -1) + max);
-	else if (min < 0 && max >= 0)
-		return (max + (min * -1) + 1);
-	else
-		return (max - min);
+	if ((i < 0) && (i != -2147483648))
+		return (i * -1);
+	return (i);
 }
