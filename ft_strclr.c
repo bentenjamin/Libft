@@ -1,25 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcpy.c                                        :+:      :+:    :+:   */
+/*   ft_strclr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bwebb <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/01/21 08:52:07 by bwebb             #+#    #+#             */
-/*   Updated: 2019/05/30 13:54:01 by bwebb            ###   ########.fr       */
+/*   Created: 2019/05/30 13:04:49 by bwebb             #+#    #+#             */
+/*   Updated: 2019/05/30 13:35:40 by bwebb            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char	*ft_strcpy(char *dest, const char *src)
-{
-	int i;
+#include "libft.h"
 
-	i = 0;
-	while (src[i] != '\0')
-	{
-		dest[i] = src[i];
-		i++;
-	}
-	dest[i] = src[i];
-	return (dest);
+void	ft_strclr(char *s)
+{
+	if (s)
+		memset(s, '\0', ft_strlen(s));
 }

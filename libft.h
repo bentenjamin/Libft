@@ -6,7 +6,7 @@
 /*   By: bwebb <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/30 11:57:37 by bwebb             #+#    #+#             */
-/*   Updated: 2019/05/30 12:08:54 by bwebb            ###   ########.fr       */
+/*   Updated: 2019/05/30 14:01:15 by bwebb            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,7 @@ int					*ft_range(int min, int max);
 void				ft_rev_params(int argc, char **argv);
 char				*ft_strchr(char *str, char cin);
 int					ft_strcmp(const char *s1, const char *s2);
-char				*ft_strcpy(char *dest, char *src);
+char				*ft_strcpy(char *dest, const char *src);
 char				*ft_strdup(char *src);
 size_t				ft_strlen(const char *str);
 int					ft_strnchr(char *str, char cin);
@@ -63,5 +63,14 @@ char				*ft_strncat(char *dest, const char *src, size_t n);
 size_t				ft_strlcat(char *d, const char *s, size_t n);
 char				*ft_strrchr(const char *str, char cin);
 int					ft_abs(int i);
+void				*ft_memalloc(size_t size);
+void				ft_memdel(void **ap);
+char				*ft_strnew(size_t size);
+void				ft_strdel(char **as);
+void				ft_strclr(char *s);
+void				ft_striter(char *s, void (*f)(char *));
+void				ft_striteri(char *s, void (*f)(unsigned int, char *));
+char				*ft_strmap(char const *s, char (*f)(char));
+char				*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 
 #endif
