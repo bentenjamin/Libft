@@ -6,7 +6,7 @@
 /*   By: bwebb <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/30 11:57:37 by bwebb             #+#    #+#             */
-/*   Updated: 2019/05/30 14:11:06 by bwebb            ###   ########.fr       */
+/*   Updated: 2019/06/03 17:11:03 by bwebb            ###   ########.fr       */
 /*   Updated: 2019/05/30 12:08:54 by bwebb            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
@@ -40,7 +40,7 @@ char				*ft_strcpy(char *dest, const char *src);
 char				*ft_strdup(char *src);
 size_t				ft_strlen(const char *str);
 int					ft_strnchr(char *str, char cin);
-char				*ft_strncpy(char *dest, char *src, size_t n);
+char				*ft_strncpy(char *dest, const char *src, size_t n);
 char				*ft_strstr(const char *str, const char *to_find);
 void				ft_swap(int *a, int *b);
 void				*ft_memset(void *str, int cin, size_t iin);
@@ -73,5 +73,10 @@ void				ft_striter(char *s, void (*f)(char *));
 void				ft_striteri(char *s, void (*f)(unsigned int, char *));
 char				*ft_strmap(char const *s, char (*f)(char));
 char				*ft_strmapi(char const *s, char (*f)(unsigned int, char));
+int					ft_strequ(char const *s1, char const *s2);
+int					ft_strnequ(char const *s1, char const *s2, size_t n);
+char				*ft_strsub(char const *s, unsigned int start, size_t len);
+char				*ft_strjoin(char const *s1, char const *s2);
+char				*ft_strtrim(char const *s);
 
 #endif

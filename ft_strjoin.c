@@ -1,28 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcpy.c                                        :+:      :+:    :+:   */
+/*   ft_strjoin.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bwebb <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/01/21 08:52:07 by bwebb             #+#    #+#             */
-/*   Updated: 2019/06/03 15:26:10 by bwebb            ###   ########.fr       */
+/*   Created: 2019/06/03 15:28:48 by bwebb             #+#    #+#             */
+/*   Updated: 2019/06/03 15:48:19 by bwebb            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strncpy(char *dest, const char *src, size_t n)
+char	*ft_strjoin(char const *s1, char const *s2)
 {
-	int i;
-	int	k;
-
-	i = -1;
-	k = ft_strlen(src);
-	while (++i < (int)n)
-		if (i < k)
-			dest[i] = src[i];
-		else
-			dest[i] = '\0';
-	return (dest);
+	return (ft_strcat(ft_strcpy(ft_strnew(ft_strlen(s1) + \
+						ft_strlen(s2)), s1), s2));
 }
