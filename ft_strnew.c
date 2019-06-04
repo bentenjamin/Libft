@@ -6,7 +6,7 @@
 /*   By: bwebb <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/30 12:52:03 by bwebb             #+#    #+#             */
-/*   Updated: 2019/05/30 13:31:34 by bwebb            ###   ########.fr       */
+/*   Updated: 2019/06/04 15:03:17 by bwebb            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,6 @@ char	*ft_strnew(size_t size)
 
 	str = ft_memalloc(size + 1);
 	if (str)
-		return (memset(str, '\0', size + 1));
+		return (str);
 	return (NULL);
 }
