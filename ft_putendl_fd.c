@@ -1,38 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putnbr.c                                        :+:      :+:    :+:   */
+/*   ft_putendl_fd.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bwebb <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/05/29 15:49:50 by bwebb             #+#    #+#             */
-/*   Updated: 2019/06/04 17:40:38 by bwebb            ###   ########.fr       */
+/*   Created: 2019/06/06 16:03:21 by bwebb             #+#    #+#             */
+/*   Updated: 2019/06/06 16:05:33 by bwebb            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_ptnr(int no, int k, char *s)
+void	ft_putendl_fd(char const *s, int fd)
 {
-	if (n > 10)
-		ft_ptnr(n / 10, k + 1, s);
-	s[k:] = ((n % 10) + '0');
-}
-
-void		ft_putnbr(int n)
-{
-	int		k;
-	char	*s;
-
-	if (!(s = ft_strnew(12)))
-		return (NULL);
-	if (n == -2147483648)
-		return (ft_strcpy(s, "-2147483648\0"));
-	k = 0;
-	if (n < 0)
-	{
-		k = 1;
-		s[0] = ('-');
-	}
-	ft_ptnr(ft_abs(n), k, s);
+	ft_putstr_fd(s, fd);
+	ft_putchar_fd('\n', fd);
 }
