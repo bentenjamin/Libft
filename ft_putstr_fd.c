@@ -6,7 +6,7 @@
 /*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/01/17 18:24:38 by bwebb             #+#    #+#             */
-/*   Updated: 2019/06/06 16:01:12 by bwebb            ###   ########.fr       */
+/*   Updated: 2019/06/06 18:26:12 by bwebb            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@ void	ft_putstr_fd(char const *str, int fd)
 	int i;
 
 	i = 0;
+	if (!str)
+		return ;
 	while (str[i] != '\0')
 	{
 		ft_putchar_fd(str[i], fd);

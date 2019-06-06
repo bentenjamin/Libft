@@ -6,7 +6,7 @@
 /*   By: bwebb <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/03 15:55:02 by bwebb             #+#    #+#             */
-/*   Updated: 2019/06/03 16:51:25 by bwebb            ###   ########.fr       */
+/*   Updated: 2019/06/06 17:58:31 by bwebb            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,8 +16,11 @@ char	*ft_strtrim(char const *s)
 {
 	int		i;
 	int		k;
+	char	*ptr;
 
-	if (ft_strncmp(s, "", 1) == 0)
+	if (!s)
+		return (NULL);
+	if (ft_strncmp(s, "", 1) == 1)
 		return (NULL);
 	i = 0;
 	while ((s[i] == '\t') || (s[i] == '\n') || (s[i] == ' '))
@@ -27,5 +30,7 @@ char	*ft_strtrim(char const *s)
 		k--;
 	if (i > k)
 		return ("");
-	return (ft_strncpy(ft_strnew(k + 1 - i), &s[i], k + 1 - i));
+	if (!(ptr = ft_strnew(k + 1 - i)))
+		return (NULL);
+	return (ft_strncpy(ptr, &s[i], k + 1 - i));
 }

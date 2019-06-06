@@ -6,7 +6,7 @@
 /*   By: bwebb <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/01/26 11:59:07 by bwebb             #+#    #+#             */
-/*   Updated: 2019/06/04 17:23:57 by bwebb            ###   ########.fr       */
+/*   Updated: 2019/06/06 18:17:32 by bwebb            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,8 +20,6 @@ char	*ft_itoa(int in)
 	int		j;
 
 	k = 0;
-	if (!(s = ft_strnew(12)))
-		return (NULL);
 	while (!((in > -10) && (in < 10)))
 	{
 		str[k++] = ft_abs(in % 10) + 48;
@@ -29,6 +27,8 @@ char	*ft_itoa(int in)
 	}
 	str[k] = ft_abs(in) + 48;
 	j = in > -1 ? 0 : 1;
+	if (!(s = ft_strnew(k + j + 1)))
+		return (NULL);
 	if (j == 1)
 		s[0] = '-';
 	while (k > -1)
