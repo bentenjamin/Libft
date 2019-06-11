@@ -6,13 +6,13 @@
 /*   By: bwebb <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/04 13:33:37 by bwebb             #+#    #+#             */
-/*   Updated: 2019/06/04 16:56:49 by bwebb            ###   ########.fr       */
+/*   Updated: 2019/06/11 18:34:38 by bwebb            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		ft_wcnt(const char *s, char c)
+static int		ft_wcnt(const char *s, char c)
 {
 	int		i;
 	int		k;
