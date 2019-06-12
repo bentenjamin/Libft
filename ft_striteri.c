@@ -6,7 +6,7 @@
 /*   By: bwebb <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/30 13:12:42 by bwebb             #+#    #+#             */
-/*   Updated: 2019/05/30 13:42:55 by bwebb            ###   ########.fr       */
+/*   Updated: 2019/06/12 14:24:18 by bwebb            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ void	ft_striteri(char *s, void (*f)(unsigned int, char *))
 	size_t	i;
 
 	i = -1;
-	if (s)
+	if (s && f)
 		while (s[++i])
 			f(i, &s[i]);
 }
