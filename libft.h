@@ -6,7 +6,7 @@
 /*   By: bwebb <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/06 18:27:54 by bwebb             #+#    #+#             */
-/*   Updated: 2019/06/11 18:23:24 by bwebb            ###   ########.fr       */
+/*   Updated: 2019/06/12 16:45:20 by bwebb            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,7 +43,7 @@ char				*ft_strncpy(char *dest, const char *src, size_t n);
 char				*ft_strstr(const char *str, const char *to_find);
 void				ft_swap(int *a, int *b);
 void				*ft_memset(void *str, int cin, size_t iin);
-void				*ft_bzero(void *str, size_t iin);
+void				ft_bzero(void *str, size_t iin);
 void				*ft_memcpy(void *dst, void *src, size_t n);
 char				*ft_strcat(char *dest, const char *src);
 char				*ft_strnstr(const char *hay, const char *ned, size_t n);

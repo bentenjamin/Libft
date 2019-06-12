@@ -6,21 +6,19 @@
 /*   By: bwebb <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/22 13:34:57 by bwebb             #+#    #+#             */
-/*   Updated: 2019/05/30 11:58:51 by bwebb            ###   ########.fr       */
+/*   Updated: 2019/06/12 16:47:40 by bwebb            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_bzero(void *str, size_t iin)
+void	ft_bzero(void *str, size_t iin)
 {
-	char	*ptr;
-	int		i;
+	unsigned char	*ptr;
+	size_t			i;
 
 	i = -1;
 	ptr = str;
-	if ((int)iin > 0)
-		while ((++i < (int)iin) && (ptr[i] != '\0'))
-			ptr[i] = '\0';
-	return (str);
+	while (++i < iin)
+		ptr[i] = 0;
 }
