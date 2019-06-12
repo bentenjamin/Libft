@@ -6,7 +6,7 @@
 /*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/01/21 10:42:53 by bwebb             #+#    #+#             */
-/*   Updated: 2019/05/30 11:58:52 by bwebb            ###   ########.fr       */
+/*   Updated: 2019/06/12 12:47:07 by bwebb            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,26 +14,20 @@
 
 char	*ft_strnstr(const char *hay, const char *ned, size_t n)
 {
-	char	bf2;
-	int		i;
-	int		j;
-	int		k;
+	size_t	i;
+	size_t	j;
 
 	i = -1;
-	k = n - ft_strlen(ned);
-	if (ft_strncmp(ned, "", 1) == 0)
+	if (ned[0] == '\0')
 		return ((char *)hay);
-	if (ft_strncmp(hay, "", 1) == 0)
-		return (NULL);
-	while (++i <= k)
-		if ((hay[i] == ned[0]) && (i < (int)n))
+	while (hay[++i] != '\0' && i < n)
+		if (hay[i] == ned[0])
 		{
 			j = 0;
-			bf2 = 1;
-			while ((++j < (int)ft_strlen(ned)) && (bf2 != 0))
-				if (hay[i + j] != ned[j])
-					bf2 = 0;
-			if (bf2 == 1)
+			while (ned[j] != '\0' && hay[i + j] ==\
+					ned[j] && hay[i + j] != '\0' && i + j < n)
+				j++;
+			if (ned[j] == '\0')
 				return ((char *)&hay[i]);
 		}
 	return (NULL);
