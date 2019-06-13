@@ -6,13 +6,13 @@
 /*   By: bwebb <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/11 16:24:25 by bwebb             #+#    #+#             */
-/*   Updated: 2019/06/13 16:44:40 by bwebb            ###   ########.fr       */
+/*   Updated: 2019/06/13 16:45:58 by bwebb            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	iter(t_list *lst, void (*f)(t_list *elem))
+static void	iter(t_list *lst, void (*f)(t_list *elem))
 {
 	if (lst->next != NULL)
 		ft_lstiter(lst->next, f);
