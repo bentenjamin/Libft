@@ -6,7 +6,7 @@
 /*   By: bwebb <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/01/26 11:22:30 by bwebb             #+#    #+#             */
-/*   Updated: 2019/05/30 12:17:28 by bwebb            ###   ########.fr       */
+/*   Updated: 2019/06/13 15:39:11 by bwebb            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,10 +28,6 @@ int	ft_atoi(char *str)
 		if (str[i++] == '-')
 			neg = -1;
 	while (ft_isdigit(str[i]))
-	{
-		nbr *= 10;
-		nbr += str[i] - 48;
-		i++;
-	}
+		nbr = (nbr * 10) + str[i++] - 48;
 	return (nbr * neg);
 }
