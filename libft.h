@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: bwebb <marvin@42.fr>                       +#+  +:+       +#+        */
+/*   By: bwebb <bwebb@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/06 18:27:54 by bwebb             #+#    #+#             */
-/*   Updated: 2019/06/12 16:45:20 by bwebb            ###   ########.fr       */
+/*   Updated: 2019/06/21 11:14:07 by bwebb            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ typedef struct		s_list
 	struct s_list	*next;
 }					t_list;
 
-int					ft_atoi(char *str);
+int					ft_atoi(const char *str);
 int					ft_maxminrange(int min, int max);
 void				ft_print_params(int argc, char **argv);
 void				ft_print_program_name(int argc, char **argv);
