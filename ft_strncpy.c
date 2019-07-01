@@ -20,9 +20,6 @@ char	*ft_strncpy(char *dest, const char *src, size_t n)
 	i = -1;
 	k = ft_strlen(src);
 	while (++i < (int)n)
-		if (i < k)
-			dest[i] = src[i];
-		else
-			dest[i] = '\0';
+		dest[i] = (i < k) ? src[i] : '\0';
 	return (dest);
 }

@@ -10,25 +10,19 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-char	*ft_strcat(char *dest, const char *src)
+#include "libft.h"
+
+char	*ft_strcat(char *d, const char *src)
 {
 	int			i;
 	int			j;
-	char		*d;
 	const char	*s;
 
-	i = 0;
-	d = dest;
+	i = ft_strlen(d);
 	s = src;
-	while (d[i] != '\0')
-		i++;
 	j = 0;
 	while (s[j] != '\0')
-	{
-		d[i] = s[j];
-		i++;
-		j++;
-	}
+		d[i++] = s[j++];
 	d[i] = '\0';
-	return (dest);
+	return (d);
 }

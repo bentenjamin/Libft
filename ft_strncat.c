@@ -26,11 +26,7 @@ char	*ft_strncat(char *dest, const char *src, size_t n)
 		i++;
 	j = 0;
 	while ((sorc[j] != '\0') && (j != (int)n))
-	{
-		dst[i] = sorc[j];
-		i++;
-		j++;
-	}
+		dst[i++] = sorc[j++];
 	dst[i] = '\0';
 	return (dest);
 }

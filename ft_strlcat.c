@@ -22,11 +22,7 @@ size_t	ft_strlcat(char *d, const char *s, size_t n)
 		i++;
 	j = 0;
 	while ((s[j] != '\0') && (i + 1 < (int)n))
-	{
-		d[i] = s[j];
-		i++;
-		j++;
-	}
+		d[i++] = s[j++];
 	if (i - j < (int)n)
 		d[i] = '\0';
 	return (i - j + ft_strlen(s));
