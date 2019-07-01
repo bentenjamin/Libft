@@ -15,7 +15,7 @@
 static void	iter(t_list *lst, void (*f)(t_list *elem))
 {
 	if (lst->next != NULL)
-		ft_lstiter(lst->next, f);
+		iter(lst->next, f);
 	f(lst);
 }
 
