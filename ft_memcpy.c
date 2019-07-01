@@ -20,7 +20,7 @@ void	*ft_memcpy(void *dst, const void *src, size_t n)
 
 	i = -1;
 	fuck = dst;
-	pointers = src;
+	pointers = (void *)src;
 	if (!((fuck == NULL) && (pointers == NULL)))
 		while (++i < n)
 			fuck[i] = pointers[i];
