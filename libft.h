@@ -6,7 +6,7 @@
 /*   By: bwebb <bwebb@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/06 18:27:54 by bwebb             #+#    #+#             */
-/*   Updated: 2019/07/18 12:30:27 by bwebb            ###   ########.fr       */
+/*   Updated: 2019/07/18 16:57:55 by bwebb            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,7 @@
 # include <stdlib.h>
 # include <unistd.h>
 # define BUFF_SIZE 32
+# define BASE_VALS "0123456789ABCDEF"
 
 typedef struct	s_fd
 {
@@ -99,5 +100,6 @@ void				ft_lstadd(t_list **alst, t_list *new);
 void				ft_lstiter(t_list *lst, void (*f)(t_list *elem));
 t_list				*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem));
 int					get_next_line(const int fd, char **line);
+char				*ft_itoa_base(int in, int base);
 
 #endif
