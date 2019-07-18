@@ -6,15 +6,15 @@
 #    By: bwebb <marvin@42.fr>                       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/05/28 15:31:17 by bwebb             #+#    #+#              #
-#    Updated: 2019/07/18 12:24:19 by bwebb            ###   ########.fr        #
+#    Updated: 2019/07/18 12:33:34 by bwebb            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = libft.a
 
-SRCS = ft_*.c
+SRCS = *.c
 
-OSRCS = ft_*.o
+OSRCS = *.o
 
 FLAGS = -Wall -Werror -Wextra
 
