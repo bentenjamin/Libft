@@ -6,7 +6,7 @@
 /*   By: bwebb <bwebb@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/06 18:27:54 by bwebb             #+#    #+#             */
-/*   Updated: 2019/07/19 18:05:07 by bwebb            ###   ########.fr       */
+/*   Updated: 2019/07/19 18:07:11 by bwebb            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -101,6 +101,6 @@ void				ft_lstiter(t_list *lst, void (*f)(t_list *elem));
 t_list				*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem));
 int					get_next_line(const int fd, char **line);
 char				*ft_itoa_base(int in, int base);
-int					ft_isclean(char *s, int (is)(int in)); //check s only ft_is
+int					ft_isonly(char *s, int (is)(int in)); //check s only ft_is
 
 #endif
