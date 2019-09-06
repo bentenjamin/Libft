@@ -6,7 +6,7 @@
 /*   By: bwebb <bwebb@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/03 11:57:01 by bwebb             #+#    #+#             */
-/*   Updated: 2019/09/03 12:01:56 by bwebb            ###   ########.fr       */
+/*   Updated: 2019/09/03 12:24:33 by bwebb            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,5 +19,5 @@ int ft_rndwncbrt(int num)
     icount = 1;
     while (icount * icount * icount < num)
         icount++;
-    return (icount);
+    return (icount - 1);
 }
