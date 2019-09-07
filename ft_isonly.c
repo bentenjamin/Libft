@@ -6,17 +6,17 @@
 /*   By: bwebb <bwebb@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/19 17:53:06 by bwebb             #+#    #+#             */
-/*   Updated: 2019/07/22 14:30:26 by bwebb            ###   ########.fr       */
+/*   Updated: 2019/09/07 21:17:04 by bwebb            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int ft_isonly(char *s, int (is)(int in))
+int	ft_isonly(char *s, int (is)(int in))
 {
-    int i;
+	int i;
 
-    i = -1;
-    while(s[++i])
-        if (!(is(s[i])))
-            return (0);
-    return (1);
+	i = -1;
+	while (s[++i])
+		if (!(is(s[i])))
+			return (0);
+	return (1);
 }

@@ -6,7 +6,7 @@
 /*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/01/17 18:24:38 by bwebb             #+#    #+#             */
-/*   Updated: 2019/06/06 18:20:40 by bwebb            ###   ########.fr       */
+/*   Updated: 2019/09/07 21:17:36 by bwebb            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,5 +14,6 @@
 
 void	ft_putstr(char const *str)
 {
-	while(str[0] && write(1, str++, 1));
+	while (str[0] && write(1, str++, 1))
+		;
 }
