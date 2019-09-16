@@ -6,7 +6,7 @@
 /*   By: bwebb <bwebb@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/06 18:27:54 by bwebb             #+#    #+#             */
-/*   Updated: 2019/09/07 21:15:41 by bwebb            ###   ########.fr       */
+/*   Updated: 2019/09/16 14:00:43 by bwebb            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -104,5 +104,6 @@ char				*ft_itoa_base(int in, int base);
 int					ft_isonly(char *s, int (is)(int in));
 long				ft_atol(const char *str);
 int					ft_rndwncbrt(int num);
+int					ft_charcount(char *s, char c);
 
 #endif
