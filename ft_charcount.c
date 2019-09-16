@@ -6,7 +6,7 @@
 /*   By: bwebb <bwebb@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/14 16:26:53 by bwebb             #+#    #+#             */
-/*   Updated: 2019/09/14 16:29:14 by bwebb            ###   ########.fr       */
+/*   Updated: 2019/09/16 16:20:00 by bwebb            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,10 +15,12 @@
 int	ft_charcount(char *s, char c)
 {
 	int i;
+	int j;
 
 	i = 0;
-	while (s)
-		if (s++[0] == c)
+	j = 0;
+	while (s[j])
+		if (s[j++] == c)
 			i++;
 	return (i);
 }
