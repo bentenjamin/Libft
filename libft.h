@@ -6,7 +6,7 @@
 /*   By: bwebb <bwebb@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/06 18:27:54 by bwebb             #+#    #+#             */
-/*   Updated: 2020/01/13 17:06:06 by bwebb            ###   ########.fr       */
+/*   Updated: 2020/01/22 18:12:54 by bwebb            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -106,5 +106,6 @@ long				ft_atol(const char *str);
 int					ft_rndwncbrt(int num);
 int					ft_charcount(char *s, char c);
 int					ft_arrlen(char **arr);
+int					ft_match(char *s1, char *s2);
 
 #endif
