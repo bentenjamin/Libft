@@ -20,7 +20,7 @@ void	*ft_memmove(void *str1, const void *str2, size_t n)
 
 	s = str2;
 	d = str1;
-	i = (d < s) ? -1 : n;
+	i = (d < s) ? (size_t)-1 : n;
 	if (((s == NULL) && (d == NULL)) || (str1 == str2))
 		return (NULL);
 	if (d < s)
