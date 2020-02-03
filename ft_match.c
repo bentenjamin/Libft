@@ -28,7 +28,7 @@ int	ft_match(char *s1, char *s2)
 				k++;
 				while (s1[i] && (s1[i] != s2[k]))
 					i++;
-				return ((!s1[i] && (s1[i] != s2[k])) ? 0 : match(s1 + i, s2 + k) );
+				return ((!s1[i] && (s1[i] != s2[k])) ? 0 : ft_match(s1 + i, s2 + k) );
 			}
 			return (0);
 		}
