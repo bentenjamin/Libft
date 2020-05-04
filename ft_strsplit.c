@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strsplit.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: bwebb <marvin@42.fr>                       +#+  +:+       +#+        */
+/*   By: ben <ben@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/04 13:33:37 by bwebb             #+#    #+#             */
-/*   Updated: 2019/06/11 18:37:26 by bwebb            ###   ########.fr       */
+/*   Updated: 2020/05/04 13:38:38 by ben              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,7 +48,8 @@ char		**ft_strsplit(char const *s, char c)
 			j = 1;
 			while ((s[++i] != c) && (s[i] != '\0'))
 				j++;
-			strs[k] = ft_strncpy(ft_strnew(j), &s[i - j], j);
+			if (!(strs[k] = ft_strncpy(ft_strnew(j), &s[i - j], j)))
+				return (NULL);
 			k++;
 			if (s[i] == '\0')
 				i--;
