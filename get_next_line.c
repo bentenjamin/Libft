@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   get_next_line.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: bwebb <bwebb@student.42.fr>                +#+  +:+       +#+        */
+/*   By: ben <ben@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/02 11:37:52 by bwebb             #+#    #+#             */
-/*   Updated: 2019/07/18 12:30:51 by bwebb            ###   ########.fr       */
+/*   Updated: 2020/05/15 09:36:52 by ben              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,10 @@ static int	retln(t_fd **fdnode, char **line)
 	temp = ft_strdup((*fdnode)->lastb);
 	ptr = ft_strchr(temp, '\n');
 	if (!ptr && ft_strlen(temp) < 1)
+	{
+		free(temp);
 		return (0);
+	}
 	if (ptr)
 		*ptr = '\0';
 	*line = ft_strdup(temp);
